@@ -1,0 +1,86 @@
+body{
+    font-family: 'Segoe UI',Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.6;
+    max-width: 800px;
+    margin:0 20px;
+    padding: 20px;
+    color: #333;
+}
+
+section, header{
+    margin-bottom: 40px;
+    padding: 20px;
+    border-bottom: 2px solid #eee;
+
+}
+h1 { margin-bottom: 0; color: #347bc3; }
+
+.tagline{
+    font-style: italic;
+    color:#7f8c8d;
+    font-size: 1.2rem;
+    margin-top:5px;
+}
+
+form input{
+    display:block;
+    width:100%;
+    margin-bottom: 10px;
+    padding:10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+.btn-solid{
+    background-color: #3498db;
+    color:white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer
+    ;
+    transition: background .3s;
+}
+
+.btn-solid:hover{
+    background-color: #2980b9;
+}
+
+.btn-outline:hover {
+    background: #e67e22;
+    color: white;
+}
+
+/* 3. Rounded Pill */
+.btn-rounded {
+    background-color: #2ecc71;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 50px; /* High radius creates pill shape */
+    border: none;
+    cursor: pointer;
+}
+
+/* 4. Gradient Flow */
+.btn-gradient {
+    background: linear-gradient(45deg, #8e44ad, #f39c12);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* 5. Floating Shadow */
+.btn-shadow {
+    background-color: white;
+    color: #333;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.btn-shadow:hover {
+    transform: translateY(-3px); /* Lifts the button on hover */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
