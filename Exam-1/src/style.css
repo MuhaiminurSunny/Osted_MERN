@@ -1,0 +1,440 @@
+@import "tailwindcss";
+
+:root{
+    --font-name:'Plus Jakarta Sans', sans-serif;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+  
+  /* Ensures the body takes up at least the full screen height */
+  min-height: 100vh;
+  
+  /* Smooth transitions for theme changes */
+  transition: background-color 0.3s ease;
+  margin:1rem 2rem;
+}
+/* NavBar Starts*/
+nav{
+    padding:10px;
+    display: flex;
+  
+    justify-content: space-between; /* This pushes items to the edges */
+    align-items: center; /* Keeps everything vertically centered */
+    width: 100%;
+}
+
+.logo p{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    line-height: 150%;
+}
+.logo{
+    gap:1rem;
+ 
+}
+
+.btn{
+    padding:1rem;
+}
+
+#dropdown{
+    width: 200%;
+    padding:.5rem 1rem;
+    text-align: left;
+    border: 1px solid whitesmoke;
+}
+
+#menu-toggle{
+    display:none;
+}
+
+ /* ======  Navbar Ends ======= */
+
+ /* ======  Hero Section Starts ======= */
+.hero{
+    width: 100%;
+    
+    padding:1rem 0;
+    align-items: stretch;
+    gap:2;
+}
+.hero-left{
+   flex:1;
+    margin:1rem 0;
+    
+}
+.hero-right{
+   position: relative;
+    flex: 1;
+    margin-left: auto; /* This pushes the element as far right as the parent allows */
+    display: flex;
+    justify-content: flex-end;
+   
+    
+}
+.hero-left>h1{
+   font-family:  'Plus Jakarta Sans', sans-serif;
+   margin-bottom: 1rem;
+   text-align: left;
+}
+.hero-left>p{
+    font-family:  'Plus Jakarta Sans', sans-serif;
+   margin-bottom: 2rem;
+   text-align: left;
+}
+.hero-left_icon{
+    padding:5px 16px;
+   
+}
+#hero-btn-left{
+    margin-right: 10px;
+}
+
+.card{
+position:absolute;
+border-radius: 20px;
+background-color: white;
+box-shadow: 0 4px 4px 4px rgba(221, 218, 218, 0.689);
+z-index: 20;
+}
+
+.card-doctor{
+top:40%;
+left:10px;
+display: flex;
+padding:1rem 1rem;
+gap:1rem;
+width:300px;
+height: 150px;
+
+}
+
+.card-doctor__img{
+    box-shadow: 2px 2px 2px 2px rgba(221, 218, 218, 0.689);
+    border-radius: 3px;
+    object-fit: cover;
+   
+    
+}
+
+.badge-available{
+    padding:2px 7px;
+    background-color: #a9f0e7;
+    color: rgb(34, 90, 37);
+    font-weight: 400;
+    border-radius: 6px;
+}
+
+.card-doctor button{
+    
+  background-color: transparent;
+  border: 2px solid #0c7c71; /* The signature Teal color */
+    border-radius: 20px;        /* Fully rounded pill shape */
+    margin-left: auto;           /* Pushes button to the right if in a flex container */
+    align-self: center;
+    padding :8px 16px;
+    transition: all .5s ease-in;
+}
+.card-doctor button:hover {
+    background-color: #0c7c71;
+    color: white;
+    transform: translateY(-2px); /* Subtle lift effect */
+    box-shadow: 0 4px 12px rgba(12, 124, 113, 0.2);
+}
+
+/* Ensure the <p> tag inside the button also changes color */
+.card-doctor button:hover p {
+    color: white;
+}
+
+/* Icon Color Change: If your icon is a black/dark SVG, 
+   this filter will make it white on hover */
+.card-doctor button:hover img {
+    filter: brightness(0) invert(1);
+}
+
+.card-testimonial {
+    position: absolute;
+    bottom: 10px;          /* Positioned towards the bottom */
+    right: -20px;          /* Pushed slightly outside the right edge */
+    background-color: #017D6E; /* Dark Teal from Figma */
+    color: white;
+    padding: 24px;
+    border-radius: 20px;
+    width: 280px;          /* Fixed width to keep quote contained */
+    z-index: 20;           /* On top of the doctor */
+    box-shadow: 0 15px 35px rgba(1, 125, 110, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Quote Text Styling */
+.card-testimonial .quote {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    font-style: italic;
+    font-weight: 400;
+    margin: 0;
+}
+
+/* Footer Alignment */
+.testimonial-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-info h4 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.user-info .age {
+    margin: 0;
+}
+
+/* Quote Icon styling */
+.quote-icon img {
+    width: 24px;
+    height: 24px;
+    opacity: 0.5; /* Makes it subtle like in the design */
+}
+
+/* ======  Hero Section Endss ======= */
+
+/* ======  Social Proof Section Starts ======= */
+
+
+/* ======  Social Proof Section Starts ======= */
+
+.social-proof{
+    margin-top:10rem ;
+}
+
+.social-proof h2{
+    font-family: var(--font-name);
+    font-weight: 700; /* Most hero/social-proof headings are bold */
+    color: #909594;
+}
+
+.social-proof__logo{
+    gap:2rem;
+    margin-top: 1rem;
+}
+
+/* ======  Social Proof Section Ends ======= */
+
+/* ======  Why_US Section Starts ======= */
+
+.why_us{
+    margin:3rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.why_us     h1{
+    font-family: var(--font-name);
+}
+
+.why_us__cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap:1rem;
+    margin-top: 2rem;
+    
+}
+
+.why_us__card{
+    flex: 1; /* Equal width */
+    /* Limits size on large screens */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Horizontally center contents */
+    padding: 40px 30px; /* generous vertical and horizontal padding */
+    border: 1px solid #e0e0e0;
+    border-radius: 24px; /* Large rounded corners like the image */
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03); /* Subtle shadow */
+    text-align: center;
+    
+}
+.why_us__card img{
+    height: 60px;
+    width: 60px;
+}
+
+.why_us__card h1{
+    margin-top: 1rem;
+    font-weight: 600;
+    font-family: var(--font-name);
+}
+
+.why_us__card p {
+    /* Set your fixed width here */
+    max-width: 200px; 
+    font-size: 14px;
+    line-height: 1.4;
+    /* This ensures the paragraph doesn't touch the card edges */
+}
+/* ======  Why_US Section Ends ======= */
+
+
+
+
+
+@media(min-width:769px)and (max-width: 1300px){
+    .hero-right{
+       transform: scale(0.85); 
+        transform-origin: center right;
+        margin-left: 20px;
+    }
+    .card-doctor {
+        /* Push the top card further left and higher up */
+        left: -120px; 
+        top: 25%;
+    }
+    
+
+    .card-testimonial {
+        /* Push the bottom card further right and lower down */
+        right: -60px;
+        bottom: -20px;
+    }
+
+    /* Make sure the doctor doesn't get squeezed */
+    .hero-right img[src*="doctor.png"] {
+        height: 90% !important;
+    }
+    .hero-right .v-bottom {
+    left: -50px;
+    top: 300px;
+    bottom: 15%;
+}
+
+/* Targeting the up-right arrow */
+.hero-right .v-top {
+    left: auto;
+    right: 10px;
+    top: 10%;
+}
+}
+
+@media (max-width: 768px) {
+  /* ======  Navbar Start ======= */
+    #menu-toggle {
+        display: flex; /* Show hamburger on mobile */
+    }
+    .btn-div{
+        margin-top: 1.5rem;
+    }
+    #nav-menu {
+        display: none; /* Hide menu by default on mobile */
+        position: absolute;
+        top: 0;
+        right: -2rem; /* Matches your body margin */
+        width: 70vw;
+        height: 100vh;
+        background: white;
+        padding: 80px 2rem;
+        box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+        z-index: 40;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Class to show the menu via JS */
+    #nav-menu.active {
+        display: flex;
+    }
+
+    /* Reset dropdown positioning for mobile */
+    #dropdown {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        border: none;
+        background: #f9f9f9;
+        margin-top: 10px;
+    }
+     /* ======  Navbar Ends ======= */
+     /* ======  Hero Section Starts ======= */
+     .hero {
+        flex-direction: column; /* Stack vertically */
+        padding: 2rem 1rem;
+        text-align: center;
+    }
+    .hero-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centers the icon and text */
+    }
+    .hero-left > h1, 
+    .hero-left > p {
+        text-align: center; /* Center typography on mobile */
+    }
+    .hero-left div:last-child {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+    }
+    #hero-btn-left {
+        margin-right: 0 !important; /* Remove that desktop margin */
+    }
+    .hero-right {
+        position: relative;
+        width: 100%;
+        min-height: 400px; /* Give it space since children are absolute */
+        margin-top: 2rem;
+    }
+    .hero-right img[src*="Vector"] {
+        transform: scale(.8);
+    }
+    .hero-right img[src*="doctor.png"] {
+        height: 100%; /* Scale to fit the 400px box */
+        width: auto;
+        bottom: 0;
+    }
+
+     /* ======  Hero Section Endss ======= */
+
+
+    /* ======  Social Proof Section Starts ======= */
+    .social-proof__logo{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    /* ======  Social Proof Section Ends ======= */
+
+    /* ======  Why_US Section Starts ======= */
+   .why_us__cards {
+        flex-direction: column;
+        padding: 0 20px; /* Space so cards don't touch screen edges */
+    }
+
+    .why_us__card {
+        width: 100%;       /* Now it can truly be 100% */
+        flex: none;        /* Resets the desktop flex logic */
+    }
+
+    .why_us__card p {
+        /* CRITICAL: This is what was keeping your text in a narrow box */
+        max-width: 100%;   
+        width: 100%;
+    }
+    /* ======  Why_US Section Starts ======= */
+
+}

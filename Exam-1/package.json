@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.2.4",
+    "autoprefixer": "^10.5.0",
+    "lucide-static": "^1.14.0",
+    "postcss": "^8.5.13",
+    "postcss-cli": "^11.0.1",
+    "postcss-preset-env": "^11.2.1",
+    "save-dev": "^0.0.1-security",
+    "tailwindcss": "^4.2.4"
+  },
+  "scripts": {
+    "watch:css": "postcss src/style.css -o dist/tailwind.css --watch",
+  "build:css": "postcss src/style.css -o dist/tailwind.css",
+  "dev": "concurrently \"npm run watch:css\" \"lite-server\""
+  }
+}

@@ -1,0 +1,3 @@
+Using two different terminals run:  
+npm run watch:css
+npx lite-server

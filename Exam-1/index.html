@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" href="./dist/tailwind.css">
+    <script defer src="script.js"></script>
+    
+</head>
+<body>
+    <nav >
+    <div class="logo flex justify-center items-center gap-4">
+        <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.4931 6.92101C13.4931 10.2937 10.7191 13.0278 7.29727 13.0278H1.10147V6.92101C1.10147 3.54833 3.87542 0.814236 7.29727 0.814236C10.7191 0.814236 13.4931 3.54833 13.4931 6.92101Z" fill="#017D6E"/>
+            <path d="M13.4931 19.1345C13.4931 15.7619 16.267 13.0278 19.6888 13.0278H25.8846V19.1345C25.8846 22.5072 23.1107 25.2413 19.6888 25.2413C16.267 25.2413 13.4931 22.5072 13.4931 19.1345Z" fill="#017D6E"/>
+            <path d="M1.10147 19.1345C1.10147 22.5072 3.87542 25.2413 7.29727 25.2413H13.4931V19.1345C13.4931 15.7619 10.7191 13.0278 7.29727 13.0278C3.87542 13.0278 1.10147 15.7619 1.10147 19.1345Z" fill="#017D6E"/>
+            <path d="M25.8846 6.92101C25.8846 3.54833 23.1107 0.814236 19.6888 0.814236H13.4931V6.92101C13.4931 10.2937 16.267 13.0278 19.6888 13.0278C23.1107 13.0278 25.8846 10.2937 25.8846 6.92101Z" fill="#017D6E"/>
+        </svg>
+        <p>Medi Bridge</p>
+    </div>
+    <button id="menu-toggle" class="sm:hidden flex flex-col gap-1.5 z-50">
+        <span class="w-6 h-0.5 bg-black"></span>
+        <span class="w-6 h-0.5 bg-black"></span>
+        <span class="w-6 h-0.5 bg-black"></span>
+    </button>
+ <div id="nav-menu" class="mobile-menu-hidden md:flex md:items-center md:gap-10">
+        <ul class="flex flex-col md:flex-row items-center gap-6 md:gap-10 list-none">
+            <li>About Us</li>
+            <li class="relative group cursor-pointer">
+                <div id="features-btn" class="flex items-center gap-2">
+                    <span>Features</span>
+                    <img id="caret" src="./img/caret-down.svg" alt="caret" class="w-3 h-3 transition-transform duration-300">
+                </div>
+                <ul id="dropdown" class="hidden absolute md:top-full left-0 mt-3 w-40 bg-white border border-neutral-200 shadow-xl rounded-[10px] z-50">
+                    <li class="px-4 py-2 hover:bg-neutral-50 text-sm">Dashboard</li>
+                    <li class="px-4 py-2 hover:bg-neutral-50 text-sm">Statistics</li>
+                    <li class="px-4 py-2 hover:bg-neutral-50 text-sm">Services</li>
+                </ul>
+            </li>
+            <li>Find Doctor</li>
+            <li>Blog</li>
+        </ul>
+
+        <!-- Auth Buttons -->
+        <!-- <div class="flex flex-row btn-div md:flex-row gap-5 mt-6 md:mt-0 items-center">
+            <button class="btn bg-neutral-50 border border-neutral-200 text-neutral-600 rounded-[10px] w-full md:w-auto">Log In</button>
+            <button class="btn bg-[#006400] text-neutral-100 rounded-[10px] w-full md:w-auto">Register</button>
+        </div> -->
+    </div>
+     <div class="flex flex-row btn-div md:flex-row gap-5 mt-6 md:mt-0 items-center">
+            <button class="btn bg-neutral-50 border border-neutral-200 text-neutral-600 rounded-[10px] w-full md:w-auto">Log In</button>
+            <button class="btn bg-[#006400] text-neutral-100 rounded-[10px] w-full md:w-auto">Register</button>
+        </div>
+    
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero flex  ">
+        <div class="hero-left flex flex-col = ">
+            <div class="hero-left_icon flex w-fit  items-center bg-[#a8cfcb] border border-[#D1E5E2]  rounded-full gap-3">
+                <div class="flex items-center justify-center bg-[#B2D8D4] w-10 h-10 rounded-full">
+                    <img src="./img/Ico Container.svg" alt="award" class="w-5 h-5">
+                </div>
+                <span class="text-[#0c7c71] font-semibold pr-4">
+                    Top-rated healthcare service
+                </span>
+            </div>
+            <h1 class="text-[2.5rem] font-medium text-left">Transforming Healthcare for a Better Tomorrow</h1>
+            <p class="text-left">With a focus on innovation, compassion, and personalized
+            care, we are committed to guiding you towards a healthier and
+                    more vibrant tomorrow.
+            </p>
+            <div>
+                
+                <button id="hero-btn-left"class="btn  bg-[#006400] text-neutral-100 rounded-[10px] w-full md:w-auto mr-10">Get Started</button>
+                <button id="hero-btn-right" class="btn bg-neutral-50 border-2 border-neutral-200 text-neutral-600 rounded-[10px] w-full md:w-auto">Learn More</button>
+            </div>
+        </div>
+        
+        <div class="hero-right relative  justify-center items-center">
+            <img src="./img/Vector_down_left.svg" class=" absolute v-bottom left-[122px] top-[400px]" alt="">
+            <img src="./img/Vector_up_right.svg" class="absolute v-top left-[465px] top-[92px]" alt="">
+            <img src="img/doctor.png" class="absolute left-1/2 -translate-x-1/2 h-[100%] z-10" alt="">
+            <div class="card-doctor card">
+                <div class="card-doctor__img flex items-center">
+                    <img src="/img/card-doctor.png" >
+                </div>
+                <div class="card-doctor__conntent flex:col  ">
+                    <span class="badge-available">Availabe</span>
+                    <h1 class="font-bold">Dr. Andrea G.</h1>
+                    <p class="text-[#5F6564]">Cardiologist</p>
+                   <span class="price text-sm whitespace-nowrap">
+                    <strong class="text-[#388E3C]">$55</strong> / session
+                </span>
+                </div>
+                <button class="flex flex-row flex-nowrap items-center justify-center gap-[6px]">
+                    <img src="/img/phone.svg" alt="" >
+                    <p class="whitespace-nowrap">Book Now</p>
+                </button>
+               
+            </div>
+            <div class="card-testimonial card">
+                <p class="quote">“The workshops were insightful, the networking opportunities were abundant”</p>
+                
+                <div class="testimonial-footer">
+                    <div class="user-info">
+                        <h4 class="font-bold">Michael Angelo</h4>
+                        <p class="age text-sm opacity-80">39 years old</p>
+                    </div>
+                    <!-- Quote Icon -->
+                    <div class="quote-icon">
+                        <img src="/img/quote.svg" alt="quote">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted By  -->
+    <section class="social-proof flex flex-col justify-center items-center">
+        <h2>Trusted by</h2>
+        <div class="social-proof__logo flex justify-center items-center ">
+            <img src="/img/logo-1.svg" alt="">
+            <img src="/img/logo-2.svg" alt="">
+            <img src="/img/logo-3.svg" alt="">
+            <img src="/img/logo-4.svg" alt="">
+            <img src="/img/logo-5.svg" alt="">
+
+
+        </div>
+    </section>
+
+    <!-- Why Choose US -->
+     <section class="why_us flex flex-col">
+        <h1 class="font-black text-[2rem]">Experience the Difference <br>
+in Our Healthcare Approach</h1>
+        <p class="text-[17px]">Transform your healthcare journey with our innovative and personalized approach</p>
+        <div class="why_us__cards">
+            <div class="why_us__card">
+                <img src="/img/icon-1.svg" alt="">
+                <h1 class="text-[20px] ">Expert Care</h1>
+                <p>Our team of experienced healthcare professionals is dedicated to providing the highest quality.</p>
+            </div>
+            <div class="why_us__card">
+                <img src="/img/icon-2.svg" alt="">
+                <h1 class="text-[20px] ">Expert Care</h1>
+                <p>We understand that every patient is unique, which is why we tailor our services to meet your needs.</p>
+            </div>
+            <div class="why_us__card">
+                <img src="/img/icon-3.svg" alt="">
+                <h1 class="text-[20px] ">Expert Care</h1>
+                <p>Beyond treating illness, we emphasize preventive care and wellness promotion.</p>
+            </div>
+            <div class="why_us__card">
+                <img src="/img/icon-4.svg" alt="">
+                <h1 class="text-[20px] ">Expert Care</h1>
+                <p>We are deeply rooted in the local community and are committed to serving and giving back.</p>
+            </div>
+            
+
+        </div>
+     </section>
+
+
+</body>
+</html>
